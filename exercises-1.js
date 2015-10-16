@@ -34,13 +34,27 @@ function sum(){
     var args = [].slice.call(arguments);
     // .. do something with each element of args
     var total = 0;
-    for( i = 0; i < args.length ; i++ ) {
+    for( var i = 0; i < args.length ; i++ ) {
       total += args[i];
     }
     return total;
 }
 
 console.assert( sum(1, 2, 3, 4, 5) === 15 )
+
+/*
+
+function sum() {
+var args = [].slice.call(arguments);
+var total = 0;
+args.forEach(el) {
+if(el > total){
+total = el;
+}
+}
+};
+
+*/
 
 
 // 2. calculate the average of numbers (returns the average (A NUMBER))
@@ -49,7 +63,7 @@ console.assert( sum(1, 2, 3, 4, 5) === 15 )
 function average(){
      var args = [].slice.call(arguments);
      var total = 0,
-    for (i = 0; i < args.length; i += 1) {
+    for ( var i = 0; i < args.length; i += 1) {
         total += args[i];
     }
     return total / args.length;
@@ -66,7 +80,7 @@ function largest(){
     var args = [].slice.call(arguments);
     // .. do something with each element of args
     var large = 0;
-    for(i = 0; i < args.length; i++) {
+    for( var i = 0; i < args.length; i++) {
       if(args[i] > large) {
         large = args[i];
       }
@@ -76,8 +90,19 @@ function largest(){
 
 console.assert( largest(2, 4, 6, 8) === 8 )
 
-// 4. find the longest string of the inputs (returns the longest input (A STRING))
+/*
 
+function largest(){
+    var args = [].slice.call(arguments);
+    var large = 0;
+    args.forEach(el) {
+if (el > larger) {
+  larger = el;
+}
+};*/
+
+
+// 4. find the longest string of the inputs (returns the longest input (A STRING))
 
 
 function longest(){
@@ -85,7 +110,7 @@ function longest(){
     var args = [].slice.call(arguments);
     var length = 0;
     var longer = " ";
-    for(i = 0; i < args.length; i++){
+    for( var i = 0; i < args.length; i++){
       if(args[i].length > length) {
         length = args[i].length;
         longer = args[i];
@@ -104,6 +129,8 @@ function longest(){
  * 1. use them in an example
  * 2. write a console.assert to test them
  */
+
+
 
 // .sort()
 
