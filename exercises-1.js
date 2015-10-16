@@ -34,13 +34,11 @@ function sum(){
     var args = [].slice.call(arguments);
     // .. do something with each element of args
     var total = 0;
-    for(var i = 0; i < args.length ; i++ ) {
-      total =  total + args[i];
+    for( i = 0; i < args.length ; i++ ) {
+      total += args[i];
     }
     return total;
 }
-
-sum(1,2,3,4,5);
 
 console.assert( sum(1, 2, 3, 4, 5) === 15 )
 
@@ -51,7 +49,6 @@ console.assert( sum(1, 2, 3, 4, 5) === 15 )
 function average(){
      var args = [].slice.call(arguments);
      var total = 0,
-        i;
     for (i = 0; i < args.length; i += 1) {
         total += args[i];
     }
